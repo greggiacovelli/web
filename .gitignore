@@ -3,3 +3,5 @@
 node_modules
 doc/fdoc-html
 tmp/cache/*
+config/initializers/secret_token.rb
+config/environments/common/authentication.yml
