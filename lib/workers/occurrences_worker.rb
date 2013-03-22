@@ -150,6 +150,7 @@ class OccurrencesWorker
     occurrence.metadata = JSON.parse(occurrence.metadata).reverse_merge(other_data).to_json
     occurrence.message  ||= occurrence.class_name # hack for Java
     occurrence.symbolicate                        # must symbolicate before assigning blame
+    occurrence.deobfuscate
     occurrence
   end
 
